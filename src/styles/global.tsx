@@ -11,8 +11,8 @@ export default createGlobalStyle`
     font-size: 10px;
 
     --logo: 800 3.5rem/4.8rem 'Sarabun', sans-serif;
-    --head1: 400 3rem/3.8rem 'Mulish', sans-serif;
-    --head2: 400 2rem/2.5rem 'Mulish', sans-serif;
+    --h1: 400 3rem/3.8rem 'Mulish', sans-serif;
+    --h2: 400 2rem/2.5rem 'Mulish', sans-serif;
     --body: 400 1.6rem/2rem 'Mulish', sans-serif;
     --bodySmall: 400 1.4rem/1.8rem 'Mulish', sans-serif;
     --button: 700 1.6rem/2rem 'Mulish', sans-serif;
