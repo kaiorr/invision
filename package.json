@@ -15,12 +15,14 @@
     "polished": "^4.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-elastic-carousel": "^0.11.4",
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-spring": "^8.0.27",
     "styled-components": "^5.2.0",
-    "typescript": "~3.7.2"
+    "typescript": "~3.8.0",
+    "yup": "^0.32.9"
   },
   "scripts": {
     "start": "react-scripts start",

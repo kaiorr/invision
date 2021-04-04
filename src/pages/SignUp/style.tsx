@@ -13,6 +13,7 @@ export const AlertContent = styled.div`
   height: 100vh;
 
   background: rgba(0, 0, 0, 0.64);
+
   animation: bgOpacity 0.5s;
 
   @keyframes bgOpacity {
@@ -26,8 +27,11 @@ export const AlertContent = styled.div`
 
   & div {
     background: var(--white);
+
     padding: 32px 64px;
+
     border-radius: 5px;
+
     animation: AlertContentUpToDown 1s;
 
     @keyframes AlertContentUpToDown {
@@ -41,7 +45,7 @@ export const AlertContent = styled.div`
 
     & > h3 {
       font: var(--h2);
-      color: var(--black);
+      color: var(--balck);
     }
   }
 `;
@@ -49,6 +53,7 @@ export const AlertContent = styled.div`
 export const Container = styled.div`
   display: flex;
   align-items: stretch;
+
   height: 100vh;
 `;
 
@@ -57,7 +62,9 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   padding: 0 6%;
+
   max-width: 960px;
   width: 100%;
 
@@ -70,7 +77,7 @@ export const Content = styled.div`
   }
 
   h1 {
-    margin-bottom: 88px;
+    margin-bottom: 50px;
 
     font: var(--h1);
     color: var(--gray);
@@ -79,10 +86,6 @@ export const Content = styled.div`
   form {
     display: flex;
     flex-direction: column;
-
-    max-width: 432px;
-    width: 100%;
-
     animation: appearFromRight 1s;
 
     @keyframes appearFromRight {
@@ -96,46 +99,33 @@ export const Content = styled.div`
       }
     }
 
-    & > a {
-      margin-left: auto;
-      margin-bottom: 30px;
-
-      font: var(--bodySmal);
-      color: var(--gray);
-    }
+    max-width: 432px;
+    width: 100%;
 
     & > .divider {
       display: flex;
       align-items: center;
 
-      margin: 30px auto 30px;
+      margin: 40px auto 52px;
 
-      font: var(--bodySmail);
+      font: var(--bodySmall);
       color: var(--gray);
 
       &::after {
         content: '';
-
         display: block;
-
-        width: 115px;
+        width: 150px;
         height: 0.5px;
-
         margin-left: 20px;
-
         background: var(--gray);
       }
 
       &::before {
         content: '';
-
         display: block;
-
-        width: 115px;
+        width: 150px;
         height: 0.5px;
-
         margin-right: 20px;
-
         background: var(--gray);
       }
     }
@@ -164,10 +154,15 @@ export const Content = styled.div`
       }
     }
 
-    & div:last-child {
+    & div:nth-child(7),
+    & div:nth-child(8) {
+      max-width: 320px;
+      width: 100%;
+
       margin: 40px auto 0;
 
-      font: var(--bodySmail);
+      text-align: center;
+      font: var(--bodySmall);
       color: var(--gray);
 
       a {
