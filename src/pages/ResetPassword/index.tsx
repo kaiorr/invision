@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useRef } from 'react';
-import { FiLogIn } from 'react-icons/fi';
+import { FiLock } from 'react-icons/fi';
 
 import { Link } from 'react-router-dom';
 import { Form } from '@unform/web';
@@ -23,12 +23,13 @@ const SignIn: React.FC = () => {
       formRef.current?.setErrors({});
 
       const schema = Yup.object().shape({
-        email: Yup.string()
-          .required('Este campo não pode ser vazio')
-          .email('O e-mail está incorreto'),
-        password: Yup.string().min(
-          6,
-          'A senha não pode ter menos de 6 caracteres',
+        oldPassword: Yup.string().notRequired(),
+        password: Yup.string()
+          .notRequired()
+          .min(6, 'A senha deve ter pelo menos 6 caracteres'),
+        confirmPassword: Yup.string().oneOf(
+          [Yup.ref('password'), null],
+          'As senhas devem ser iguais',
         ),
       });
 
@@ -55,9 +56,9 @@ const SignIn: React.FC = () => {
       {logged && (
         <AlertContent>
           <div>
-            <h2>Login Realizado</h2>
+            <h2>Senha Redefinida</h2>
             <Button type="submit" onClick={handleAlert}>
-              <FiLogIn size={35} />
+              <FiLock size={35} />
             </Button>
           </div>
         </AlertContent>
@@ -71,26 +72,31 @@ const SignIn: React.FC = () => {
           <h1>Welcome to Invision</h1>
           <Form ref={formRef} onSubmit={handleSubmit}>
             <Input
-              label="Users name or Email"
-              name="email"
-              placeholder="carolinagalvaosantos@gmail.com"
-              type="text"
+              label="Password"
+              name="password"
+              placeholder="Digite a senha atual"
+              type="password"
             />
             <Input
               label="Password"
               name="password"
-              placeholder="Digite sua senha"
+              placeholder="Digite sua nova senha"
               type="password"
             />
-            <Link to="/resetpassword">Forgot password?</Link>
-            <Button type="submit">Sign In</Button>
+            <Input
+              label="Password"
+              name="password"
+              placeholder="Digite sua nova senha"
+              type="password"
+            />
+            <Button type="submit">Reset Password</Button>
             <div className="divider">Or</div>
             <button className="buttonSocialGoogle" type="button">
               <GoogleIcon />
               Sign In with Google
             </button>
             <div>
-              New <b>Invision</b> <Link to="/signup">Create Account</Link>
+              Now <b>Inviser</b> <Link to="/">Sign In</Link>
             </div>
           </Form>
         </Content>
