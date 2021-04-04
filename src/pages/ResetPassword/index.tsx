@@ -54,10 +54,10 @@ const SignIn: React.FC = () => {
   return (
     <>
       {logged && (
-        <AlertContent>
+        <AlertContent data-testid="content-resetpassword">
           <div>
             <h2>Senha Redefinida</h2>
-            <Button type="submit" onClick={handleAlert}>
+            <Button onClick={handleAlert}>
               <FiLock size={35} />
             </Button>
           </div>
@@ -72,18 +72,21 @@ const SignIn: React.FC = () => {
           <h1>Welcome to Invision</h1>
           <Form ref={formRef} onSubmit={handleSubmit}>
             <Input
+              dataTestid="input-oldPassword"
               label="Password"
               name="password"
               placeholder="Digite a senha atual"
               type="password"
             />
             <Input
+              dataTestid="input-newPassword"
               label="Password"
               name="password"
               placeholder="Digite sua nova senha"
               type="password"
             />
             <Input
+              dataTestid="input-confirmPassword"
               label="Password"
               name="password"
               placeholder="Digite sua nova senha"

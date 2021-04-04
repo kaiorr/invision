@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { shade } from 'polished';
 
 export const AlertContent = styled.div`
   display: flex;
@@ -157,10 +156,6 @@ export const Content = styled.div`
 
       & svg {
         margin-right: 20px;
-      }
-
-      &:hover {
-        background: ${shade(0.05, '#fff')};
       }
     }
 

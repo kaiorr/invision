@@ -53,10 +53,10 @@ const SignIn: React.FC = () => {
   return (
     <>
       {logged && (
-        <AlertContent>
+        <AlertContent data-testid="content-signin">
           <div>
             <h2>Login Realizado</h2>
-            <Button type="submit" onClick={handleAlert}>
+            <Button onClick={handleAlert}>
               <FiLogIn size={35} />
             </Button>
           </div>
@@ -69,14 +69,16 @@ const SignIn: React.FC = () => {
         <Content>
           <a href="test">Invision</a>
           <h1>Welcome to Invision</h1>
-          <Form ref={formRef} onSubmit={handleSubmit}>
+          <Form data-testid="form-signin" ref={formRef} onSubmit={handleSubmit}>
             <Input
+              dataTestid="input-email"
               label="Users name or Email"
               name="email"
               placeholder="carolinagalvaosantos@gmail.com"
               type="text"
             />
             <Input
+              dataTestid="input-password"
               label="Password"
               name="password"
               placeholder="Digite sua senha"
