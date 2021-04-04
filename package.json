@@ -1,5 +1,5 @@
 {
-  "name": "invision-boilerplate",
+  "name": "invision",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,9 +13,7 @@
     "@unform/core": "^2.1.3",
     "@unform/web": "^2.1.3",
     "react": "^16.13.1",
-    "react-day-picker": "^7.4.8",
     "react-dom": "^16.13.1",
-    "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-spring": "^8.0.27",
@@ -32,9 +30,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/pages/**/*.tsx",
-      "src/components/**/*.tsx",
-      "src/hooks/**/*.tsx",
-      "!src/hooks/index.tsx"
+      "src/components/**/*.tsx"
     ]
   },
   "browserslist": {
