@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useRef } from 'react';
-import { FiUser } from 'react-icons/fi';
+import { FiLogIn } from 'react-icons/fi';
 
 import { Link } from 'react-router-dom';
 import { Form } from '@unform/web';
@@ -54,11 +54,11 @@ const SignIn: React.FC = () => {
   return (
     <>
       {logged && (
-        <AlertContent>
+        <AlertContent data-testid="content-signup">
           <div>
             <h2>Cadastro Realizado</h2>
-            <Button type="submit" onClick={handleAlert}>
-              <FiUser size={35} />
+            <Button onClick={handleAlert}>
+              <FiLogIn size={35} />
             </Button>
           </div>
         </AlertContent>
@@ -72,18 +72,21 @@ const SignIn: React.FC = () => {
           <h1>Getting Started</h1>
           <Form ref={formRef} onSubmit={handleSubmit}>
             <Input
+              dataTestid="input-name"
               label="Full Name"
               name="name"
               placeholder="Carolina Galvão dos Santos Zaglia"
               type="text"
             />
             <Input
+              dataTestid="input-email"
               label="Users name or Email"
               name="email"
               placeholder="carolinagalvaosantos@gmail.com"
               type="text"
             />
             <Input
+              dataTestid="input-password"
               label="Password"
               name="password"
               placeholder="Digite sua senha"
